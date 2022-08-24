@@ -12,4 +12,5 @@
 minecraft net/minecraft/util/ClassInstanceMultiMap.java
 minecraft net/minecraft/world/entity/ai/behavior/AcquirePoi.java
 minecraft net/minecraft/world/entity/ai/behavior/SetClosestHomeAsWalkTarget.java
-minecraft net/minecraft/world/entity/ai/navigation/AmphibiousPathNavigation.java
+#minecraft net/minecraft/world/entity/ai/navigation/AmphibiousPathNavigation.java
+minecraft net/minecraft/server/level/ServerBossEvent.java
