@@ -176,7 +176,7 @@ index 47b5f75d9f27cf3ab947fd1f69cbd609fb9f2749..85882eeb86d7b74db0219aa65783946d
      public ChunkHolder.FullChunkStatus status;
  
 diff --git a/src/main/java/net/minecraft/server/level/ChunkMap.java b/src/main/java/net/minecraft/server/level/ChunkMap.java
-index e9238c779bf5b7fd1d2c555941230df4184c4cb1..4120cf3f89474d1ee8fbdb3a172dfc0e866412ce 100644
+index e9238c779bf5b7fd1d2c555941230df4184c4cb1..f7f7dc6f5abba8b2e0a0581bcc41d42e84d9c539 100644
 --- a/src/main/java/net/minecraft/server/level/ChunkMap.java
 +++ b/src/main/java/net/minecraft/server/level/ChunkMap.java
 @@ -2036,8 +2036,26 @@ public class ChunkMap extends ChunkStorage implements ChunkHolder.PlayerProvider
@@ -206,11 +206,13 @@ index e9238c779bf5b7fd1d2c555941230df4184c4cb1..4120cf3f89474d1ee8fbdb3a172dfc0e
          this.level.timings.tracker1.startTiming();
          try {
              for (TrackedEntity tracker : this.entityMap.values()) {
-@@ -2230,11 +2248,11 @@ public class ChunkMap extends ChunkStorage implements ChunkHolder.PlayerProvider
+@@ -2229,12 +2247,12 @@ public class ChunkMap extends ChunkStorage implements ChunkHolder.PlayerProvider
+ 
      public class TrackedEntity {
  
-         final ServerEntity serverEntity;
+-        final ServerEntity serverEntity;
 -        final Entity entity;
++        public final ServerEntity serverEntity; // paperfake - Purpur -> package -> public
 +        public final Entity entity; // petal -> public
          private final int range;
          SectionPos lastSectionPos;
